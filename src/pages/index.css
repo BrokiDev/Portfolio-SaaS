@@ -1,0 +1,33 @@
+
+.dark {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  @media (max-width: 1024px) {
+    #menu {
+      display: none;
+    }
+    #menu.show {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    #menu a {
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+
+
+

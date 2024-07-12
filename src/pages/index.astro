@@ -1,53 +1,178 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import "./index.css";
 
+const title = "Bryantr - Full Stack Developer Portfolio";
+const description =
+  "Bryantr is a Full Stack Developer with 2 years of experience in building scalable and efficient web applications. Explore the portfolio to see skills, experience, and projects.";
+const author = "Bryan Ramirez";
+const keywords =
+  "Full Stack Developer, Web Development, JavaScript, React, Node.js, Portfolio";
+const url = "https://bryantr.dev";
+const image = "https://bryantr.dev/img-back.svg";
 ---
 
-
-
-<Layout title="SASS Portfolio">
-	
-  <main class="bg-gradient-to-tr from-[#84CFF5] to-white h-screen w-full">
-    <header class="text-black flex justify-around items-center p-4 px-8">
-      <div >
-        <h3><a href="">LOGO</a></h3>
+<Layout
+  title={title}
+  description={description}
+  author={author}
+  keywords={keywords}
+  url={url}
+  image={image}
+>
+  <main class="bg-[#202833] min-h-screen w-full">
+    <header
+      class="text-black flex flex-wrap justify-between items-center p-4 px-8"
+    >
+      <div class="flex justify-between items-center w-full lg:w-auto">
+        <h1 class="text-[#A6A6A6] hover:text-[#4caaa9] text-3xl">
+          <a href="/">Bryantr</a>
+        </h1>
+        <button
+          id="menu-btn"
+          class="lg:hidden text-3xl mt-2 text-white focus:outline-none"
+        >
+          ☰
+        </button>
       </div>
-      <nav class="flex items-center justify-end gap-7 text-[#A6A6A6]">
-        <a href="">Home</a>
+      <nav
+        id="menu"
+        class="hidden lg:flex flex-wrap items-center justify-end gap-5 text-[#A6A6A6] w-full lg:w-auto"
+      >
         <a href="">Skills</a>
-        <a href="">Services</a>
-        <a href="">Benefits</a>
-        <a href="">Contacts</a>
-		<div class="pl-5">
-			<h3>Toogle Mode</h3>
-		  </div>
+        <a href="">Experience</a>
+        <a href="">Contact</a>
+        <div class="pl-5">
+          <h3>Toggle Mode</h3>
+        </div>
       </nav>
-
     </header>
 
-    <section class=" flex justify-center items-center w-full  gap-5 p-28 bg-gradient-to-tr from-[#84CFF5] to-white">
-      <div class="w-full  flex flex-col justify-center items-center">
-        <div class="w-full p-28 ">
-          <h3 class="font-bold text-5xl mt-4 p-2">We’re here to Increase your</h3>
-          <p class="text-lg mt-3">
-            Let's make your work more organize and easily using the Taskio
-            Dashboard with many of the latest features in managing work every
-            day.
-          </p>
-          <button class="rounded-full w-3/12 p-4 mt-4 bg-[#37B2EC] text-white">Let's Connect</button>
+    <section
+      class="flex flex-col lg:flex-row justify-center items-center h-auto lg:h-[90vh] w-full p-4"
+    >
+      <div
+        class="flex flex-col justify-center items-center text-center lg:text-left lg:w-6/12"
+      >
+        <h2 class="font-bold text-[#59c4c2] text-3xl">Full Stack Developer</h2>
+        <h3 class="text-white text-3xl p-2">Bryan Ramirez</h3>
+        <p class="text-lg text-white max-w-lg">
+          I am a Full Stack Developer with 2 years of experience. I am
+          passionate about building scalable and efficient web applications.
+        </p>
+        <div class="flex items-center gap-5 mt-5">
+          <a
+            href="/public/CvBryantEnglish.pdf"
+            target="_blank"
+            class="bg-transparent border border-[#4caaa9] text-white p-3 px-14 rounded-lg hover:bg-[#4caaa9] transform hover:scale-105 transition-transform duration-300"
+          >
+            Download CV
+          </a>
         </div>
       </div>
-      <div class="w-full p-10">
-        <img  src="../../public/sectionImage.svg" alt="" />
+      <div class="w-full lg:w-4/12 mt-8 lg:mt-0">
+        <img
+          class="w-full"
+          src="../../public/img-back.svg"
+          alt="Background Image"
+        />
       </div>
     </section>
 
-	<section class="bg-white w-full h-full">
+    <section class="bg-[#2a3443] w-full p-8">
+      <div class="flex flex-col items-center justify-center">
+        <h1 class="mb-14 text-4xl font-bold text-white">About Me</h1>
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center gap-6 lg:w-8/12"
+        >
+          <div class="flex flex-col items-center w-full lg:w-auto">
+            <img
+              class="border border-gray-400 rounded-3xl w-10/12 lg:w-7/12"
+              src="../../public/image_me.jpg"
+              alt="About Me Image"
+            />
+            <div class="flex justify-center items-center gap-3 mt-4">
+              <a
+                target="_blank"
+                class="transform hover:scale-105 transition-transform duration-300 hover:drop-shadow-lg"
+                href="https://www.linkedin.com/in/bryan-ramirez-ogando/"
+              >
+                <img src="../../public/icon-LinkedIn.svg" alt="LinkedIn" />
+              </a>
+              <a
+              target="_blank"
+                class="transform hover:scale-105 transition-transform duration-300 hover:drop-shadow-lg"
+                href="https://github.com/BrokiDev"
+              >
+                <img src="../../public/icon-github.svg" alt="GitHub" />
+              </a>
+              <a
+                class="transform hover:scale-105 transition-transform duration-300 hover:drop-shadow-lg"
+                href="mailto:bryantro855@gmail.com"
+              >
+                <img src="../../public/icon-mail.png" alt="Email" />
+              </a>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-center mt-6 lg:mt-0 w-full lg:w-auto"
+          >
+            <h1 class="font-bold text-3xl pl-6 text-white">
+              Know More About Me
+            </h1>
+            <p class="text-lg mt-3 text-[#7D8883] pl-6 text-justify max-w-lg">
+              Well-qualified Full Stack Developer familiar with wide range of
+              programming utilities and languages. Knowledgeable of backend and
+              frontend development requirements. Handles any part of process
+              with ease. Collaborative team player with excellent technical
+              abilities offering 2 years of related experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<div>
-			<h2>Skills</h2>
-		</div>
-	</section>
+    <section class="w-full h-full bg-[#2a3443] p-8 text-white">
+      <div class="flex flex-col items-center justify-center">
+        <h1 class="mb-14 text-4xl font-bold text-white">Skills</h1>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-10 lg:gap-16 pb-10"
+        >
+          <Card title="HTML" img="../../public/skills/icon-html.svg" />
+          <Card title="CSS" img="../../public/skills/icon-css.svg" />
+          <Card
+            title="TailwindCSS"
+            img="../../public/skills/icon-tailwind.svg"
+          />
+          <Card
+            title="JavaScript"
+            img="../../public/skills/icon-javascript.svg"
+          />
+          <Card
+            title="Typescript"
+            img="../../public/skills/icon-typescript.png"
+          />
+          <Card title="ReactJS" img="../../public/skills/icon-react.svg" />
+          <Card title="NodeJS" img="../../public/skills/icon-nodejs.svg" />
+          <Card title="ExpressJS" img="../../public/skills/icon-express.svg" />
+          <Card title="MongoDB" img="../../public/skills/icon-mongodb.svg" />
+          <Card
+            title="PostgreSQL"
+            img="../../public/skills/icon-postgres.svg"
+          />
+          <Card
+            title="PrismaORM"
+            img="../../public/skills/icon-prisma-orm.svg"
+          />
+          <Card title="Docker" img="../../public/skills/icon-docker.svg" />
+        </div>
+      </div>
+    </section>
   </main>
+  <script>
+    document.getElementById("menu-btn")?.addEventListener("click", function () {
+      document.getElementById("menu")?.classList.toggle("show");
+    });
+  </script>
 </Layout>
-
