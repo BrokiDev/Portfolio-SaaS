@@ -22,6 +22,7 @@ html {
       display: flex;
       flex-direction: column;
       width: 100%;
+      background-color: rgba(245, 245, 245, 0.014);
     }
     #menu a {
       padding: 10px 0;
