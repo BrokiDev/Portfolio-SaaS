@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import Image from "astro/components/Image.astro";
 import "./index.css";
 
 const title = "Bryan Ramirez Ogando - Full Stack Developer Portfolio";
@@ -325,9 +324,11 @@ const year = new Date().getFullYear();
     </p>
   </footer>
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"
+  <script is:inline type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"
   ></script>
-  <script>
+  <script is:inline>
+
+
     document.getElementById("menu-btn")?.addEventListener("click", function () {
       document.getElementById("menu")?.classList.toggle("show");
     });
@@ -337,13 +338,15 @@ const year = new Date().getFullYear();
       ?.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const formData = new FormData(this as HTMLFormElement);
+
+        const formData = new FormData(this);
 
         if (
           !formData.get("name") ||
           !formData.get("email") ||
           !formData.get("message")
         ) {
+
           Toastify({
             text: "Please fill all the fields",
             duration: 3000,
@@ -378,6 +381,7 @@ const year = new Date().getFullYear();
           backgroundColor: "#4caaa9",
           stopOnFocus: true,
         }).showToast();
+
 
         this.reset();
       });
