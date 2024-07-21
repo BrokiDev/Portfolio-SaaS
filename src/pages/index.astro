@@ -12,6 +12,7 @@ const keywords =
 const url = "https://bryantr.dev";
 const image = "/img-back.svg";
 const year = new Date().getFullYear();
+
 ---
 
 <Layout
@@ -22,17 +23,15 @@ const year = new Date().getFullYear();
   url={url}
   image={image}
 >
-  <main class="bg-[#202833] min-h-screen w-full">
-    <header
-      class="text-black flex flex-wrap justify-between items-center p-4 px-8"
-    >
+  <main class="min-h-screen w-full relative">
+    <header class="flex flex-wrap justify-between items-center p-4 px-8">
       <div class="flex justify-between items-center w-full lg:w-auto">
         <h1 class="text-[#A6A6A6] hover:text-[#4caaa9] text-3xl">
-          <a href="/">Bryantr</a>
+          <a title="bryantr" href="/">Bryantr</a>
         </h1>
         <button
           id="menu-btn"
-          class="lg:hidden text-3xl mt-2 text-white focus:outline-none"
+          class="lg:hidden text-3xl mt-2 focus:outline-none"
         >
           ☰
         </button>
@@ -41,12 +40,31 @@ const year = new Date().getFullYear();
         id="menu"
         class="hidden lg:flex flex-wrap items-center justify-end gap-5 text-[#A6A6A6] w-full lg:w-auto"
       >
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a
+          title="skills"
+          href="#skills"
+          class="hover:text-[#59c4c2] hover:underline">Skills</a
+        >
+        <a
+          title="experience"
+          href="#experience"
+          class="hover:text-[#59c4c2] hover:underline">Experience</a
+        >
+        <a
+          title="projects"
+          href="#projects"
+          class="hover:text-[#59c4c2] hover:underline">Projects</a
+        >
+        <a
+          title="contact"
+          href="#contact"
+          class="hover:text-[#59c4c2] hover:underline">Contact</a
+        >
         <div class="pl-5">
-          <h3>Toggle Mode</h3>
+          <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle" />
+            <span class="slider"></span>
+          </label>
         </div>
       </nav>
     </header>
@@ -58,16 +76,17 @@ const year = new Date().getFullYear();
         class="flex flex-col justify-center items-center text-center lg:text-left lg:w-6/12"
       >
         <h2 class="font-bold text-[#59c4c2] text-3xl">Full Stack Developer</h2>
-        <h3 class="text-white text-3xl p-2">Bryan Ramirez</h3>
-        <p class="text-lg text-white max-w-lg">
+        <h3 class="text-3xl p-2">Bryan Ramirez</h3>
+        <p class="text-lg max-w-lg">
           I am a Full Stack Developer with 2 years of experience. I am
           passionate about building scalable and efficient web applications.
         </p>
         <div class="flex items-center gap-5 mt-5">
           <a
+            title="Download CV"
             href="/CVBryantEnglish.pdf"
             target="_blank"
-            class="bg-transparent border border-[#4caaa9] text-white p-3 px-14 rounded-lg hover:bg-[#4caaa9] transform hover:scale-105 transition-transform duration-300"
+            class="bg-transparent border border-[#4caaa9] p-3 px-14 rounded-lg hover:bg-[#4caaa9] transform hover:scale-105 transition-transform duration-300"
           >
             Download CV
           </a>
@@ -78,9 +97,9 @@ const year = new Date().getFullYear();
       </div>
     </section>
 
-    <section class="bg-[#2a3443] w-full p-8">
+    <section class="w-full p-8">
       <div class="flex flex-col items-center justify-center">
-        <h1 class="mb-6 text-4xl font-bold text-white">About Me</h1>
+        <h3 class="mb-6 text-4xl font-bold">About Me</h3>
         <hr class="w-10/12 border-[#59c4c2] mb-10" />
         <div
           class="flex flex-col lg:flex-row justify-center items-center gap-6 lg:w-8/12"
@@ -93,6 +112,7 @@ const year = new Date().getFullYear();
             />
             <div class="flex justify-center items-center gap-3 mt-4">
               <a
+                title="LinkedIn"
                 target="_blank"
                 class="transform hover:scale-105 transition-transform duration-300 hover:drop-shadow-lg"
                 href="https://www.linkedin.com/in/bryan-ramirez-ogando/"
@@ -100,6 +120,7 @@ const year = new Date().getFullYear();
                 <img src="/icon-LinkedIn.svg" alt="LinkedIn" />
               </a>
               <a
+                title="GitHub"
                 target="_blank"
                 class="transform hover:scale-105 transition-transform duration-300 hover:drop-shadow-lg"
                 href="https://github.com/BrokiDev"
@@ -107,6 +128,7 @@ const year = new Date().getFullYear();
                 <img src="/icon-github.svg" alt="GitHub" />
               </a>
               <a
+                title="Email"
                 class="transform hover:scale-105 transition-transform duration-300 hover:drop-shadow-lg"
                 href="mailto:bryantro855@gmail.com"
               >
@@ -117,9 +139,7 @@ const year = new Date().getFullYear();
           <div
             class="flex flex-col justify-center mt-6 lg:mt-0 w-full lg:w-auto"
           >
-            <h1 class="font-bold text-3xl pl-6 text-white">
-              Know More About Me
-            </h1>
+            <h3 class="font-bold text-3xl pl-6">Know More About Me</h3>
             <p class="text-lg mt-3 text-[#7D8883] pl-6 text-justify max-w-lg">
               Well-qualified Full Stack Developer familiar with wide range of
               programming utilities and languages. Knowledgeable of backend and
@@ -132,9 +152,9 @@ const year = new Date().getFullYear();
       </div>
     </section>
 
-    <section id="skills" class="w-full h-full bg-[#2a3443] p-8 text-white">
+    <section id="skills" class="w-full h-full p-8">
       <div class="flex flex-col items-center justify-center">
-        <h1 class="mb-6 text-4xl font-bold text-white">Skills</h1>
+        <h3 class="mb-6 text-4xl font-bold">Skills</h3>
         <hr class="w-10/12 border-[#59c4c2] mb-10" />
         <div
           class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-10 lg:gap-16 pb-10"
@@ -155,9 +175,9 @@ const year = new Date().getFullYear();
       </div>
     </section>
 
-    <section id="experience" class="w-full h-full bg-[#2a3443] p-8 text-white">
+    <section id="experience" class="w-full h-full p-8">
       <div class="flex flex-col items-center justify-center">
-        <h1 class="mb-5 text-4xl font-bold text-white">Experience</h1>
+        <h3 class="mb-5 text-4xl font-bold">Experience</h3>
         <hr class="w-10/12 border-[#59c4c2] mb-10" />
 
         <div
@@ -194,9 +214,9 @@ const year = new Date().getFullYear();
       </div>
     </section>
 
-    <section id="projects" class="w-full h-full bg-[#2a3443] p-8 text-white">
+    <section id="projects" class="w-full h-full p-8">
       <div class="flex flex-col items-center justify-center">
-        <h1 class="mb-5 text-4xl font-bold text-white">Projects</h1>
+        <h3 class="mb-5 text-4xl font-bold">Projects</h3>
         <hr class="w-10/12 border-[#59c4c2] mb-10" />
 
         <div class="flex flex-wrap gap-8 px-4 md:px-10 lg:px-20 xl:px-36">
@@ -221,6 +241,7 @@ const year = new Date().getFullYear();
 
               <div class="flex items-center gap-3 mt-4">
                 <a
+                  title="View Project"
                   target="_blank"
                   class="transform hover:scale-105 transition-transform duration-300 hover:drop-shadow-lg"
                   href="https://plyn.bryantr.dev"
@@ -241,19 +262,18 @@ const year = new Date().getFullYear();
           <div
             class="flex flex-col w-full md:w-5/12 lg:w-4/12 border border-slate-300/30 p-5 transform hover:scale-105 transition-transform duration-300 hover:drop-shadow-lg cursor-pointer"
           >
-            <!-- another proyect can be here -->
-            <h1 class="text-center">Waiting for deploy....</h1>
+            <h4 class="text-center">Waiting for deploy....</h4>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="w-full h-full bg-[#2a3443] p-8 text-white">
+    <section id="contact" class="w-full h-full p-8">
       <div class="flex flex-col items-center justify-center">
-        <h1 class="mb-5 text-4xl font-bold text-white">Contact</h1>
+        <h3 class="mb-5 text-4xl font-bold">Contact</h3>
         <hr class="w-10/12 border-[#59c4c2] mb-10" />
         <div class="flex flex-col items-center gap-5 w-full lg:w-8/12">
-          <h1 class="text-2xl font-bold">Contact Me</h1>
+          <h3 class="text-2xl font-bold">Contact Me</h3>
 
           <form
             id="contact-form"
@@ -276,14 +296,15 @@ const year = new Date().getFullYear();
               name="message"
               placeholder="Message"></textarea>
             <button
-              class="bg-transparent border border-[#4caaa9] text-white p-3 px-14 rounded-lg hover:bg-[#4caaa9] transform hover:scale-105 transition-transform duration-300"
+              title="Send"
+              class='bg-transparent border  border-[#4caaa9]  p-3 px-14 rounded-lg hover:bg-[#4caaa9] transform hover:scale-105 transition-transform duration-300'
             >
               Send
             </button>
           </form>
         </div>
         <hr class="w-10/12 border-[#59c4c2] mt-10" />
-        <h1 class="text-2xl font-bold mt-5">Or Contact Me Through</h1>
+        <h3 class="text-2xl font-bold mt-5">Or Contact Me Through</h3>
         <p class="text-lg mt-3 text-[#7D8883] text-center">
           Feel free to contact me through my social media or email.
         </p>
@@ -314,21 +335,31 @@ const year = new Date().getFullYear();
     </section>
   </main>
 
-  <footer class="bg-[#202833] text-white p-8 text-center">
+  <footer class="p-8 text-center">
     <p>&copy; Bryantr {year} <span>All rights reserved.</span></p>
 
     <p>
       Powered in Astro by <a
+        title="Bryantr"
         class="hover:text-[#59c4c2] hover:underline"
-        href="https://www.linkedin.com/in/bryan-ramirez-ogando/">Bryantr</a>
+        href="https://www.linkedin.com/in/bryan-ramirez-ogando/">Bryantr</a
+      >
     </p>
   </footer>
 
-  <script is:inline type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"
-  ></script>
+  <div class="fixed right-2 bottom-3 md:right-8">
+    <button
+      id="back-to-top"
+      class="py-1 px-3 rounded-full font-bold bg-black text-white"
+      >&#x2191;</button
+    >
+  </div>
+
+  <script
+    is:inline
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script is:inline>
-
-
     document.getElementById("menu-btn")?.addEventListener("click", function () {
       document.getElementById("menu")?.classList.toggle("show");
     });
@@ -338,7 +369,6 @@ const year = new Date().getFullYear();
       ?.addEventListener("submit", function (e) {
         e.preventDefault();
 
-
         const formData = new FormData(this);
 
         if (
@@ -346,7 +376,6 @@ const year = new Date().getFullYear();
           !formData.get("email") ||
           !formData.get("message")
         ) {
-
           Toastify({
             text: "Please fill all the fields",
             duration: 3000,
@@ -382,8 +411,43 @@ const year = new Date().getFullYear();
           stopOnFocus: true,
         }).showToast();
 
-
         this.reset();
       });
+
+    const button = document.getElementById("back-to-top");
+
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
+        button.style.display = "block";
+      } else {
+        button.style.display = "none";
+      }
+    }
+
+    button.onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    const toggleButton = document.getElementById("dark-mode-toggle");
+    toggleButton?.addEventListener("click", () => {
+      
+      const htmlElement = document.documentElement;
+      htmlElement.classList.toggle("dark");
+      localStorage.setItem(
+        "theme",
+        htmlElement.classList.contains("dark") ? "dark" : "light"
+      );
+    });
+
+    localStorage.getItem("theme") === "dark" &&
+      document.documentElement.classList.add("dark");
+
   </script>
 </Layout>
