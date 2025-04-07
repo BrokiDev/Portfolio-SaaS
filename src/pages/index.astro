@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import "./index.css";
+import Experience from "../components/Experience.astro";
 
 const title = "Bryan Ramirez Ogando - Full Stack Developer Portfolio";
 const description =
@@ -12,7 +13,6 @@ const keywords =
 const url = "https://bryantr.dev";
 const image = "/img-back.svg";
 const year = new Date().getFullYear();
-
 ---
 
 <Layout
@@ -189,49 +189,11 @@ const year = new Date().getFullYear();
         <div
           class="flex flex-col items-center gap-1 w-full px-4 md:px-10 lg:px-20 xl:px-36"
         >
-        <div
-        class="flex flex-col md:flex-row justify-between items-start md:items-center w-full border border-slate-300/30 p-5 transform hover:scale-105 transition-transform duration-300 hover:drop-shadow-lg cursor-pointer"
-      >
-        <div class="md:flex-1">
-          <h3 class="text-2xl font-bold">Software Engineer</h3>
-          <h3 class="text-xl">Grupo Read</h3>
-        </div>
-        <div class="md:flex-1 mt-4 md:mt-0 text-right md:text-left">
-          <h3 class="text-xl font-bold">2024-07 - Present</h3>
-          <h3 class="text-xl">Arroyo Hondo, Dominican Republic</h3>
-        </div>
-        
-      </div>
+          <Experience jobTitle="Software Engineer" companyName="Grupo Read" startDate="2024-07" endDate="Present" workLocation="  Arroyo Hondo, Dominican Republic" divisor={true} />
+          <Experience jobTitle="Full Stack Developer" companyName="Media Revolution SRL" startDate="2023-10" endDate="2024-08" workLocation="Distrito Nacional, Dominican Republic" divisor={true}  />
+          <Experience jobTitle="Full Stack Developer" companyName="Independent" startDate="2022-04" endDate="Present" workLocation="Santo Domingo, Dominican Republic"  />
 
-      <div class="border h-12"></div>
-          <div
-            class="flex flex-col md:flex-row justify-between items-start md:items-center w-full border border-slate-300/30 p-5 transform hover:scale-105 transition-transform duration-300 hover:drop-shadow-lg cursor-pointer"
-          >
-            <div class="md:flex-1">
-              <h3 class="text-2xl font-bold">Full Stack Developer</h3>
-              <h3 class="text-xl">Media Revolution SRL</h3>
-            </div>
-            <div class="md:flex-1 mt-4 md:mt-0 text-right md:text-left">
-              <h3 class="text-xl font-bold">2023-10 - 2024-08</h3>
-              <h3 class="text-xl">Distrito Nacional, Dominican Republic</h3>
-            </div>
-            
-          </div>
 
-          <div class="border h-12"></div>
-
-          <div
-            class="flex flex-col md:flex-row justify-between items-start md:items-center w-full border border-slate-300/30 p-5 transform hover:scale-105 transition-transform duration-300 hover:drop-shadow-lg cursor-pointer"
-          >
-            <div class="md:flex-1">
-              <h3 class="text-2xl font-bold">Full Stack Developer</h3>
-              <h3 class="text-xl">Independent</h3>
-            </div>
-            <div class="md:flex-1 mt-4 md:mt-0 text-right md:text-left">
-              <h3 class="text-xl font-bold">2022-04 - Present</h3>
-              <h3 class="text-xl">Santo Domingo, Dominican Republic</h3>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -319,7 +281,7 @@ const year = new Date().getFullYear();
               placeholder="Message"></textarea>
             <button
               title="Send"
-              class='bg-transparent border  border-[#4caaa9]  p-3 px-14 rounded-lg hover:bg-[#4caaa9] transform hover:scale-105 transition-transform duration-300'
+              class="bg-transparent border border-[#4caaa9] p-3 px-14 rounded-lg hover:bg-[#4caaa9] transform hover:scale-105 transition-transform duration-300"
             >
               Send
             </button>
@@ -459,7 +421,6 @@ const year = new Date().getFullYear();
 
     const toggleButton = document.getElementById("dark-mode-toggle");
     toggleButton?.addEventListener("click", () => {
-      
       const htmlElement = document.documentElement;
       htmlElement.classList.toggle("dark");
       localStorage.setItem(
@@ -470,6 +431,5 @@ const year = new Date().getFullYear();
 
     localStorage.getItem("theme") === "dark" &&
       document.documentElement.classList.add("dark");
-
   </script>
 </Layout>
